@@ -26,6 +26,7 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 stack_t *stack;
+stack_t *top;
 
 /**
  * struct instruction_s - opcode and its function
@@ -57,6 +58,10 @@ void sub(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
 void _mul(stack_t **stack, unsigned int line_number);
 void _mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, __attribute__((unused))unsigned int line_number);
+void _rotr(stack_t **stack, unsigned int line_number);
 
 
 #endif

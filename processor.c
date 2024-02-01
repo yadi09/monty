@@ -37,6 +37,9 @@ void processor(char *file_name, unsigned int line_number)
   line_number++;
 
   opcode = strtok(line, " \n");
+
+  if (opcode[0] != '#')
+    {
   value_str = strtok(NULL, " \n");
 
   value = check_value_str(value_str);
@@ -49,6 +52,8 @@ void processor(char *file_name, unsigned int line_number)
     }
 
   f_ptr(&stack, line_number);
+    }
+
   
   }
   fclose(fp);
